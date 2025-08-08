@@ -1,0 +1,141 @@
+@import url(reset.css);
+
+body {
+    background-color: rgb(98, 116, 123);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 360px;
+    height: 800px;
+    background-color: #FFFFFF;
+    padding: 119px 24px 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 36px;
+    margin-bottom: 43px;
+}
+
+form {
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+form input {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 312px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 4px;
+}
+
+.forgot {
+    line-height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2f89fc;
+    margin-bottom: 20px;
+}
+
+.login {
+    border-radius: 5px;
+    width: 312px;
+    height: 48px;
+    background: #0e64d2;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+}
+
+.sign_up {
+    width: 229px;
+    line-height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.sign_up a {
+    color: #2f89fc;
+}
+
+div {
+    margin-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 311px;
+    line-height: 21px;
+}
+
+div hr {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 139px;
+    height: 0px;
+}
+
+.facebook {
+    border-radius: 10px;
+    width: 312px;
+    height: 48px;
+    background: #1877f2;
+    display: flex;
+    margin-bottom: 23px;
+}
+
+.facebook img {
+    margin: 7px 0 0 9px;
+}
+
+.facebook span {
+    margin: auto 57px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.google {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 312px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+}
+
+.google img {
+    margin-left: 8px;
+}
+
+.google span {
+    margin-left: 60px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}

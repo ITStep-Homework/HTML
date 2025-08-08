@@ -1,0 +1,74 @@
+@import 'reset.css';
+
+body {
+    width: 1440px;
+    height: 1024px;
+    background-color: #162831;
+    color: white;
+    font-family: 'El Messiri', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1296px;
+    height: 698px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 482px;
+}
+
+header span{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 140%;
+    text-align: center;
+}
+
+main {
+    margin-top: 116px;
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+main div{
+    width: 416px;
+}
+
+.left_side {
+    background-image: url('../img/big.svg');
+    height: 540px;
+    margin-right: 24px;
+    border-bottom: 7px solid #018ABE;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+    padding: 0 0 50px 50px;
+}
+
+.right_side {
+    display: flex;
+    flex-wrap: wrap;
+    width: 856px;
+    gap: 24px;
+}
+
+.right_side div{
+    height: 258px;
+    background-image: url('../img/small.svg');
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+    padding: 0 40px 30px 40px;
+}
