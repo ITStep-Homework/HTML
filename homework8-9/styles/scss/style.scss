@@ -1,0 +1,266 @@
+@import url(../css/reset.css);
+
+$font-family: "Montserrat", sans-serif;
+$main-color: #252b42;
+$secondary-color: #737373;
+$section1-color: #A784C2;
+$section2-color: #C7BEBE;
+
+%title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 142%;
+    letter-spacing: 0.01em;
+    color: $main-color;
+    text-align: center;
+}
+
+%subtitle {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+}
+
+%text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+}
+
+@mixin flex-x($jc: space-between, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flex-y($jc: start, $ai: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+    min-width: 320px;
+}
+
+.features {
+    background-color: $section1-color;
+    @include flex-x($jc:center);
+    padding: 80px 40px;
+}
+
+.features__container {
+    max-width: 1050px;
+    @include flex-y($jc: center);
+}
+
+.features__title {
+    @extend %title;
+}
+
+.features__text {
+    @extend %text;
+    text-align: center;
+    margin: 10px 0 50px;
+    max-width: 511px;
+}
+
+.features__cards {
+    @include flex-x();
+    gap: 30px;
+    max-width: 1050px;
+}
+
+.features__card {
+    width: 238px;
+    height: 209px;
+    padding: 30px 0;
+    background-color: white;
+    @include flex-y($jc: space-between, $ai: center);
+}
+
+.features__card__title {
+    @extend %title;
+}
+
+.features__card__subtitle {
+    @extend %subtitle;
+    text-align: center;
+}
+
+.advices {
+    background-color: $section2-color;
+    padding: 125px 40px 80px;
+    @include flex-x($jc: center);
+}
+
+.advices__container {
+    max-width: 1050px;
+    @include flex-y($ai: center);
+}
+
+.advices__title {
+    @extend %title;
+}
+
+.advices__text {
+    @extend %text;
+    text-align: center;
+    max-width: 470px;
+    margin: 10px 0 45px;
+}
+
+.advices__cards {
+    max-width: 1050px;
+    gap: 30px;
+    @include flex-x($ai: start);
+}
+
+.advices__card {
+    width: 230px;
+}
+
+.advices__card__info {
+    background-color: white;
+    padding: 30px;
+    height: 200px;
+}
+
+.advices__card__subtitle {
+    @extend %subtitle;
+    margin-bottom: 15px;
+    color: $main-color;
+}
+
+.advices__card__text {
+    @extend %text;
+}
+
+.business-service {
+    background-color: #F5F5F5;
+    @include flex-x($jc: center);
+    padding: 100px 195px;
+}
+
+.business-service__container {
+    @include flex-y($ai: center);
+    max-width: 1050px;
+}
+
+.business-service__title {
+    @extend %title;
+    max-width: 480px;
+}
+
+.business-service__text {
+    @extend %text;
+    text-align: center;
+    margin: 15px 0 100px;
+    max-width: 511px;
+}
+
+.business-service__trust {
+    max-width: 1050px;
+    @include flex-x();
+    gap: 120px;
+}
+
+.business-service__trust__info {
+    width: 330px;
+}
+
+.business-service__trust__info__title {
+    @extend %title;
+    text-align: start;
+}
+
+.business-service__trust__info__text {
+    @extend %text;
+    margin: 10px 0 50px;
+}
+
+.business-service__trust__info__list {
+    @include flex-y($jc: space-between);
+    gap: 30px;
+}
+
+.business-service__trust__info__list__unit {
+    @include flex-x($ai: start);
+    gap: 20px;
+}
+
+.business-service__trust__info__list__unit__info {
+    @include flex-y($jc: space-between, $ai: start);
+    gap: 5px;
+}
+
+.business-service__trust__info__list__unit__info__subtitle {
+    @extend %subtitle;
+    color: $main-color;
+}
+
+.business-service__trust__info__list__unit__info__text {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.01em;
+    color: #737373;
+}
+
+.business-service__trust__video {
+    max-width: 600px;
+}
+
+@media screen and (min-width: 570px) and (max-width: 1130px) {
+    .features__cards, .advices__cards {
+        max-width: 570px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .business-service__trust {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        .business-service__trust__info__title {
+            text-align: center;
+        }
+        .business-service__trust__info__text {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .features__cards, .advices__cards {
+        max-width: 320px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .business-service__trust {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        .business-service__trust__video img {
+            width: 330px;
+            height: 440px;
+            object-fit: cover;
+        }
+        .business-service__trust__info__title {
+            text-align: center;
+        }
+        .business-service__trust__info__text {
+            text-align: center;
+        }
+    }
+}
